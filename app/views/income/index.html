@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Home Office - Income Proving
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="/">Prototypes</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        <span class="heading-secondary">Prototypes</span>
+        Family Income Proving
+      </h1>
+
+      <div class="text">
+        <p class="lede">
+          A service to prove an applicants income for Family Casework using information provided by HMRC.
+        </p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Notes</th>
+            <th>Published</th>
+            <th>Prototype</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>4</td>
+            <td>Iteration on Version 3 to include dependants in the financial check. Use NINO QQ123456A to fail the threshold or QQ123456B for a failed application. Any other NINO will pass.</td>
+            <td>3rd May 2016</td>
+            <td><a href="/income/4/">View</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Caseworker Tool for Category A Salaried applicants. Use NINO QQ123456A to fail the check or QQ123456B for a failed application. Any other NINO will pass.</td>
+            <td>31st Mar 2016</td>
+            <td><a href="/income/3/">View</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Designed to allow the casework team in Sheffield to access a decision after research in Sheffield. Use NINO QQ123456A to fail the threshold.</td>
+            <td>9th Mar 2016</td>
+            <td><a href="/income/2/">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+</main>
+{% endblock %}
