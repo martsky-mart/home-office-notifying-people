@@ -2090,3 +2090,11 @@ input[type=number] {
 #logo {
   background-image: url("/public/images/homeoffice_logotype_shield_invert_trans.png") !important;
 }
+
+p strong {
+  font-weight: bold;
+}
+
+.panel .heading-medium {
+  margin-top: 20px;
+}
