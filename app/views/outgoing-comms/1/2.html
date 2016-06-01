@@ -1,108 +1,125 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Home Office - Visa and Immigration
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
 <main id="content" role="main">
 
-{% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %}
 
-{% include "includes/outgoing-header.html" %}
+    <h1 class="heading-medium" style="margin-top: 20px;">Generate approval</h1>
 
-<h1 class="heading-medium" style="margin-top: 20px;">Generate approval</h1>
+    <form action="/outgoing-comms/1/3" method="get" class="form">
 
-  <form action="/outgoing-comms/1/3" method="get" class="form">
+        <fieldset class="inline">
 
-    <fieldset class="inline">
+            <h2 class="heading-small">Does the applicant have dependants?</h2>
+            <label class="block-label" data-target="dependant-granted" for="radio-has-dependant-yes">
+                <input id="radio-has-dependant-yes" type="radio" name="radioHasDependant" value="yes"> Yes
+            </label>
+            <label class="block-label" for="radio-has-dependant-no">
+                <input id="radio-has-dependant-no" type="radio" name="radioHasDependant" value="no"> No
+            </label>
 
-  <h2 class="heading-small">
-    Does the applicant have dependants?
-  </h2>
-      <label class="block-label" data-target="dependant-granted" for="radio-has-dependant-yes" >
-        <input id="radio-has-dependant-yes" type="radio" name="radioHasDependant" value="yes">
-        Yes
-      </label>
-      <label class="block-label" for="radio-have-dependant-no">
-        <input id="radio-has-dependant-no" type="radio" name="radioHasDependant" value="no">
-        No
-      </label>
+        </fieldset>
 
-    </fieldset>
+        <div class="js-hidden" id="dependant-granted">
+            <fieldset class="inline">
 
-<div class="js-hidden" id="dependant-granted">
-  <fieldset class="inline">
+                <h2 class="heading-small">Dependant 1</h2>
+                <label class="block-label" for="radio-dependant-1-granted">
+                    <input id="radio-dependant-1-granted" type="radio" name="radioDependant1" value="granted" checked> Granted
+                </label>
+                <label class="block-label" for="radio-dependant-1-refused">
+                    <input id="radio-dependant-1-refused" type="radio" name="radioDependant1" value="refused"> Refused
+                </label>
 
-  <h2 class="heading-small">
-    Dependant 1
-  </h2>
-      <label class="block-label" for="radio-dependant-1-granted" >
-        <input id="radio-dependant-1-granted" type="radio" name="radioDependant1" value="granted">
-        Granted
-      </label>
-      <label class="block-label" for="dependant-1-refused">
-        <input id="radio-dependant-1-refused" type="radio" name="radioDependant1" value="refused">
-        Refused
-      </label>
+            </fieldset>
 
-    </fieldset>
+            <fieldset class="inline">
 
-   <fieldset class="inline">
+                <h2 class="heading-small">Dependant 2</h2>
+                <label class="block-label" for="radio-dependant-2-granted">
+                    <input id="radio-dependant-2-granted" type="radio" name="radioDependant2" value="granted" checked> Granted
+                </label>
+                <label class="block-label" for="radio-dependant-2-refused">
+                    <input id="radio-dependant-2-refused" type="radio" name="radioDependant2" value="refused"> Refused
+                </label>
 
-  <h2 class="heading-small">
-    Dependant 2
-  </h2>
-      <label class="block-label"  for="radio-dependant-2-granted" >
-        <input id="radio-dependant-2-granted" type="radio" name="radioDependant2" value="granted">
-        Granted
-      </label>
-      <label class="block-label" for="dependant-2-refused">
-        <input id="radio-dependant-2-refused" type="radio" name="radioDependant2" value="refused">
-        Refused
-      </label>
+            </fieldset>
+        </div>
 
-    </fieldset>
-</div>
+        <fieldset class="inline">
 
-    <fieldset class="inline">
+            <h2 class="heading-small">Police registration</h2>
 
-  <h2 class="heading-small">
-    Police registration
-  </h2>
-      <label class="block-label" for="radio-police-yes">
-        <input id="radio-police-yes" type="radio" name="radioPolice" value="yes">
-        Yes
-      </label>
-      <label class="block-label" for="radio-police-no">
-        <input id="radio-police-no" type="radio" name="radioPolice" value="no">
-        No
-      </label>
+            <label class="block-label" for="radio-police-yes">
+                <input id="radio-police-yes" type="radio" name="radioPolice" value="yes"> Yes
+            </label>
+            <label class="block-label" for="radio-police-no">
+                <input id="radio-police-no" type="radio" name="radioPolice" value="no"> No
+            </label>
 
-    </fieldset>
+        </fieldset>
+
+        <h2 class="heading-small">Sponsor details</h2>
+        <table class="no-lines">
+            <tr>
+                <th>Course:</th>
+                <td>Electronic Engineering</td>
+            </tr>
+            <tr>
+                <th>Sponsor:</th>
+                <td>Manchester University</td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td>Faculty of Engineering, Electronic House, M2 4TG</td>
+            </tr>
+        </table>
+
+        <fieldset class="inline">
+
+            <h2 class="heading-small">Are the sponsor details correct?</h2>
+
+            <label class="block-label" for="radio-sponsor-ok">
+                <input id="radio-sponsor-ok" type="radio" name="radioSponsor" value="yes" checked> Yes
+            </label>
+            <label class="block-label" data-target="edit-sponsor" for="radio-sponsor-edit">
+                <input id="radio-sponsor-edit" type="radio" name="radioSponsor" value="no"> No
+            </label>
+
+        </fieldset>
+
+        <div class="js-hidden" id="edit-sponsor">
+            <fieldset class="inline">
+                <div class="panel panel-border-narrow">
+                    <h2 class="heading-small">Please correct the sponsor details</h2>
+
+                    <div class="form-group">
+                        <label class="form-label" for="course">Course</label>
+                        <input class="form-control" id="course" name="course" type="text" value="Electronic Engineering">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="sponsor">Sponsor</label>
+                        <input class="form-control" id="sponsor" name="sponsor" type="text" value="Manchester University">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="sponsor">Sponsor</label>
+                        <textarea class="form-control" id="sponsor" name="sponsor" type="text" rows="4">
+Faculty of Engineering,
+Electronic House,
+M2 4TG
+                        </textarea>
+                    </div>
+
+                </div>
+            </fieldset>
+        </div>
 
 
-    <table class="no-lines">
-      <tr>
-      <th>Course:</th>
-      <td>Electronic Engineering</td>
-      </tr>
-      <tr>
-      <th>Sponsor:</th>
-      <td>Manchester University</td>
-      </tr>
-      <tr>
-      <th>Address:</th>
-      <td>Faculty of Engineering, Electronic House, M2 4TG</td>
-      </tr>
-      </table>
 
+        <div class="form-group">
+            <input type="submit" class="button continue-button" value="Next">
+        </div>
 
-    <div class="form-group">
-      <input type="submit" class="button continue-button" value="Next">
-    </div>
-
-  </form>
+    </form>
 
 </main>
 {% endblock %}
