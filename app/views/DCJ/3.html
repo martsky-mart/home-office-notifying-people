@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Home Office - Visa and Immigration
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/phase_banner_alpha.html" %}
+
+{% include "includes/breadcrumb_notifying_1.html" %}
+    
+<h2 class="heading-large " style="margin-top: 20px;">Your email and password</h2>
+
+
+<form action="/DCJ/4" method="get" class="form">
+    <div class="form-group">
+        <label class="form-label" for="email">Email address</label>
+        <span class="form-hint">You need an email address so you can save your application and go back to it later</span>
+        <input class="form-control" id="email" name="email" type="email" >
+        <label class="form-checkbox" for="checkbox-email" style="margin-bottom: 5px;">
+            <input id="checkbox-email" name="checkbox-email" type="checkbox" value="true">
+            Use email rather than post where possible
+        </label>
+        <span class="form-hint">We can email you your decision as soon as it is made instead of posting it to you, as well as in some other circumstances when we need to get in touch.</span>
+
+
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="password">Create a password</label>
+        <span class="form-hint">
+        Your password must
+            <ul class="list list-bullet" style="margin-left: 25px; margin-top: 15px;">
+                <li>be at least 8 characters long</li>
+                <li>contain at least one letter</li>
+                <li>contain at least one number or symnbol such as @ or %</li>
+            </ul>
+        </span>
+        <input class="form-control" id="password" name="password" type="password">
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="password2">Repeat your password</label>
+        <input class="form-control" id="password2" name="password2" type="password">
+    </div>
+      
+    <div class="form-group">
+      <input type="submit" class="button continue-button" value="Save and continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

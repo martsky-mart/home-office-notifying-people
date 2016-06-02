@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Home Office - Visa and Immigration
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/phase_banner_alpha.html" %}
+
+{% include "includes/breadcrumb_notifying_1.html" %}
+    
+<h2 class="heading-large " style="margin-top: 20px;">One more step</h2>
+
+    <p>Check your email and click the link to confirm your email address</p>
+        
+    <h2 class="heading-small bounce animated"  style="padding: 10px 15px 2px 15px; background: #ffbf47; display: inline-block; margin: 0;"><span class="icon icon-important"></span><span style="padding-left: 15px; top: -10px; position: relative;">We cannot send your decision by email unless you click the link</span></h2>
+    
+<form action="/DCJ/6" method="get" class="form">
+  
+    <div class="form-group">
+      <input type="submit" class="button continue-button" value="I understand - Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

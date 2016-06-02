@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Home Office - Visa and Immigration
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/phase_banner_alpha.html" %}
+    
+<h2 class="bold-xsmall bounce animated" style="padding: 10px 10px 5px 10px; background: #FFBF47; margin: 10px 0 0 0 ;"><span class="icon icon-important"></span><span style="padding-left: 15px; top: -10px; position: relative;">Please click the link in the email we have sent you. We can not send your decision by email unless you do</span></h2> 
+
+
+{% include "includes/breadcrumb_notifying_1.html" %}
+    
+<h2 class="heading-large " style="margin-top: 20px;">Check your answers</h2>
+
+
+<form action="/DCJ/7" method="get" class="form">
+
+<table class="check-your-answers">
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium" style="margin: 0;">
+            Personal information
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Are you currently in the UK?
+        </td>
+        <td>
+          Yes
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+       Email address
+        </td>
+        <td>
+          example@email.com
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium" style="margin: 0;">
+            Legal representative
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Do you have a legal representative for this application?
+        </td>
+        <td>
+          No
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+ 
+    </tbody>
+  </table>
+    
+      
+    <div class="form-group">
+      <input type="submit" class="button continue-button" value="Save and continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

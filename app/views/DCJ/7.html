@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
+<main id="content" role="main">
+
+    {% include "includes/phase_banner_alpha.html" %}
+
+    <h2 class="bold-xsmall bounce animated" style="padding: 10px 10px 5px 10px; background: #FFBF47; margin: 10px 0 0 0 ;"><span class="icon icon-important"></span><span style="padding-left: 15px; top: -10px; position: relative;">Please click the link in the email we have sent you. We can not send your decision by email unless you do</span></h2> 
+    
+    {% include "includes/breadcrumb_notifying_1.html" %}
+
+    <hr style="margin:0;" />
+
+    <form action="/DCJ/placeholder" method="get" class="form">
+        <div class="applicant">
+            <p>Tier 4 (General) student
+                <br/>
+                <span class="bold-small">The applicant</span>
+                <br/>
+                <span class="bold-small" style="color: #B10E1E">Part complete</span></p>
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" class="button continue-button" value="Answer questions about this person">
+        </div>
+
+        <div id="addAnotherApplicant" aria-labelledby="editInformation" class="content-max-width">
+
+            <details>
+                <summary id="addAnotherApplicantLabel" aria-controls="dc_1" tabindex="0" role="button" aria-expanded="false">Would you like to add another person to this application?</summary>
+                <div class="inner panel panel-border-narrow" id="dc_1">
+
+                    <div class="js-block">
+
+                        <form action="/save/application" method="post">
+                            <div>
+                                <fieldset class="">
+                                            <label for="addAnother_pbs-dependant-child" class="block-label">
+                                                <input type="radio" id="addAnother_pbs-dependant-child" name="addAnother" value="pbs-dependant-child">
+                                                <span class="block">dependant child</span>
+
+                                            </label>
+                                            <label for="addAnother_pbs-dependant-partner" class="block-label">
+                                                <input type="radio" id="addAnother_pbs-dependant-partner" name="addAnother" value="pbs-dependant-partner">
+                                                <span class="block">dependant partner or spouse</span>
+                                            </label>
+                                </fieldset>
+                            </div>
+
+                        </form>
+                    </div>
+                            <div class="form-group" style="margin-top: 15px;">
+                                <input id="addAnotherId" type="submit" value="Add" class="button continue-button">
+                            </div>
+                </div>
+            </details>
+        </div>
+
+    </form>
+
+</main>
+{% endblock %}
+

@@ -26,5 +26,14 @@
 }
 
 #logo {
-	background-image: url('/public/images/homeoffice_logotype_shield_invert_trans.png') !important;
+//	background-image: url('/public/images/homeoffice_logotype_shield_invert_trans.png') !important;
+}
+
+.applicant {    
+    margin: 0.8rem 0;
+    padding-left: 8.4rem;
+    background-image: url("https://visas-immigration.service.gov.uk/assets/images/contact.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 7.2rem;
 }
