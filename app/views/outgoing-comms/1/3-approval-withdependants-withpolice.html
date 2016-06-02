@@ -1,85 +1,71 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Home Office - Visa and Immigration
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
 <main id="content" role="main">
 
-{% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %}
 
-{% include "includes/outgoing-header.html" %}
-
-<h2 class="heading-medium" style="margin-top: 20px;">Please check before sending</h2>
+    <h2 class="heading-medium" style="margin-top: 20px;">Ready to send the Approval email</h2>
 
 
-  <form action="/outgoing-comms/1/4" method="get" class="form">
+    <form action="/outgoing-comms/1/4" method="get" class="form">
+        
+<!--
+        <p>Send as</p>
+        <fieldset class="inline">
 
-<p>Send as</p>
-<fieldset class="inline">
+            <label class="block-label" for="radio-inline-1">
+                <input id="radio-inline-1" type="radio" name="radio-inline-group" checked value="Email"> Email
+            </label>
+            <label class="block-label" for="radio-inline-2">
+                <input id="radio-inline-2" type="radio" name="radio-inline-group" value="Letter"> Letter
+            </label>
 
-      <label class="block-label" for="radio-inline-1">
-        <input id="radio-inline-1" type="radio" name="radio-inline-group" checked value="Email">
-        Email
-      </label>
-      <label class="block-label" for="radio-inline-2">
-        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="Letter">
-        Letter
-      </label>
-
-    </fieldset>
-
-
-<details>
-
-    <summary><span class="summary">Show text</span></summary>
-
-    <div class="panel panel-border-narrow">
-
-<p>     To: ayo.zhang@address.com<br/>
-Subject: <strong>Your Tier 4 (General) student visa application decision</strong></p>
-
-<p>Your Tier 4 (General) student visa application with dependants has been approved.</p>
-<p> You have been given permission to study:</p>
-
-<p>Course: Electronic engineering<br/>
-Sponsor: Manchester University<br/>
-Address: Faculty of Engineering, Electronic House, M2 4TG</p>
-
-<p><strong>Dependants approved to remain in the UK</strong></p>
-
-<p>Dependant 1<br/>
-Dependant 2</p>
-
-<p>We will send your biometric residence permit (BRP) within 7 working days.
-The courier will need proof of identity and a signature. See <a href="http://gov.uk/brp">gov.uk/brp</a> for more information about the BRP. </p>
-
-<h3 class="heading-small">Travelling out of the UK?</h3>
-<p>You should not make any travel arrangements until you receive your BRP. </p>
-
-<h2 class="heading-medium">What you need to do now </h2>
-<p>You must register with the police within 7 days of receiving your BRP. Police registration information is no longer displayed on BRPs. You must still register. Dependants under the age of 16 do not need to register. </p>
-
-<p>See <a href="gov.uk/register-with-the-police">gov.uk/register-with-the-police</a> for information about where to go and what documents to take. </p>
-
-<p>Go to <a href="http://gov.uk/leaflet.to.come">gov.uk/leaflet.to.come</a> for the conditions of your stay in the UK.</p>
-
-<p>If you have been granted less time than applied for, you may get a partial refund of your Immigration Health Surcharge payment.</p>
-
-<p>If you’re unhappy with the amount or conditions of your leave you can ask for your application to be reviewed. See <a href="http://gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk">gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk</a>.</p>
+        </fieldset>
+-->
 
 
+        <p> To: ayo.zhang@address.com
+        <br/> Subject: <strong>Your Tier 4 (General) student visa application decision</strong></p>
 
-    </div>
+        <div class="panel panel-border-narrow">
 
-  </details>
+            
+            <h2 class="heading-medium">Your Tier 4 (General) student visa application with dependants has been approved.</h2>
+            <p> You have been given permission to study:</p>
 
-    <div class="form-group">
-      <input type="submit" class="button continue-button" value="Select and continue">
-    </div>
+            <p>Course: Electronic engineering
+                <br/> Sponsor: Manchester University
+                <br/> Address: Faculty of Engineering, Electronic House, M2 4TG
+                <br />Visa Expiry: 30 September 2018</p>
 
-  </form>
+            <p><strong>Dependants approved to remain in the UK</strong></p>
+
+            <p>Dependant 1
+                <br/> Dependant 2</p>
+
+            <p>We will send your biometric residence permit (BRP) within 7 working days. The courier will need proof of identity and a signature. See <a href="http://gov.uk/brp">gov.uk/brp</a> for more information about the BRP. </p>
+
+            <h3 class="heading-small">Travelling out of the UK?</h3>
+            <p>You should not make any travel arrangements until you receive your BRP. </p>
+
+            <h2 class="heading-medium">What you need to do now </h2>
+            <p>You must register with the police within 7 days of receiving your BRP. Police registration information is no longer displayed on BRPs. You must still register. Dependants under the age of 16 do not need to register. </p>
+
+            <p>See <a href="gov.uk/register-with-the-police">gov.uk/register-with-the-police</a> for information about where to go and what documents to take. </p>
+
+            <p>Go to <a href="http://gov.uk/leaflet.to.come">gov.uk/leaflet.to.come</a> for the conditions of your stay in the UK.</p>
+
+            <p>If you have been granted less time than applied for, you may get a partial refund of your Immigration Health Surcharge payment.</p>
+
+            <p>If you’re unhappy with the amount or conditions of your leave you can ask for your application to be reviewed. See <a href="http://gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk">gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk</a>.</p>
+
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" class="button continue-button" value="Send now">
+        </div>
+
+    </form>
 
 
 
