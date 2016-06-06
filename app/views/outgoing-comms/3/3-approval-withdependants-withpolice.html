@@ -1,12 +1,16 @@
 {% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
 <main id="content" role="main">
 
-    {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %}
+    {% include "includes/phase_banner_alpha.html" %}
+    
+    {% include "includes/outgoing-header.html" %}
+
+    {% include "includes/applicant-details.html" %}
 
     <h2 class="heading-medium" style="margin-top: 20px;">Ready to send the Approval email</h2>
 
 
-    <form action="/outgoing-comms/2/4" method="get" class="form">
+    <form action="/outgoing-comms/3/4" method="get" class="form">
         
 <!--
         <p>Send as</p>
