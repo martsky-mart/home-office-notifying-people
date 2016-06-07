@@ -7,7 +7,7 @@
 
     {% include "includes/applicant-details.html" %}
     
-    <h1 class="heading-medium" style="margin-top: 20px;">Generate approval</h1>
+    <h1 class="heading-medium" style="margin-top: 20px;">Generate grant</h1>
 
     <form action="/outgoing-comms/3/3" method="get" class="form">
 
@@ -51,7 +51,7 @@
 
         <fieldset class="inline">
 
-            <h2 class="heading-small">Police registration</h2>
+            <h2 class="heading-small">Does the applicant need to register with the police?</h2>
 
             <label class="block-label" for="radio-police-yes">
                 <input id="radio-police-yes" type="radio" name="radioPolice" value="yes"> Yes
@@ -62,8 +62,21 @@
 
         </fieldset>
 
-        <h2 class="heading-small">Sponsor details</h2>
+        <h2 class="heading-small">Visa details</h2>
+        
+        <p>Please check carefully</p>
         <table class="no-lines">
+            <tr>
+                <th>Entitlement to work code:</th>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th>Visa expiry:</th>
+                <td>30 September 2018</td>
+            </tr>
+            <tr>
+            <td><br/></td><td></td></tr>
+
             <tr>
                 <th>Course:</th>
                 <td>Electronic Engineering</td>
@@ -80,7 +93,7 @@
 
         <fieldset class="inline">
 
-            <h2 class="heading-small">Are the sponsor details correct?</h2>
+            <h2 class="heading-small">Are the details correct?</h2>
 
             <label class="block-label" for="radio-sponsor-ok">
                 <input id="radio-sponsor-ok" type="radio" name="radioSponsor" value="yes" checked> Yes
@@ -94,19 +107,28 @@
         <div class="js-hidden" id="edit-sponsor">
             <fieldset class="inline">
                 <div class="panel panel-border-narrow">
-                    <h2 class="heading-small">Please correct the sponsor details</h2>
+                    <h2 class="heading-small">Please correct the details</h2>
+
+                    <div class="form-group">
+                        <label class="form-label" for="course">Entitlement to work code</label>
+                        <input class="form-control" id="course" name="course" type="text" value="2">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="sponsor">Visa expiry</label>
+                        <input class="form-control" id="sponsor" name="sponsor" type="text" value="30/09/18">
+                    </div>
 
                     <div class="form-group">
                         <label class="form-label" for="course">Course</label>
                         <input class="form-control" id="course" name="course" type="text" value="Electronic Engineering">
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="sponsor">Sponsor</label>
-                        <input class="form-control" id="sponsor" name="sponsor" type="text" value="Manchester University">
+                        <label class="form-label" for="sponsorname">Sponsor name</label>
+                        <input class="form-control" id="sponsorname" name="sponsor" type="text" value="Manchester University">
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="sponsor">Sponsor</label>
-                        <textarea class="form-control" id="sponsor" name="sponsor" type="text" rows="4">
+                        <label class="form-label" for="sponsoraddr">Sponsor address</label>
+                        <textarea class="form-control" id="sponsoraddr" name="sponsor" type="text" rows="4">
 Faculty of Engineering,
 Electronic House,
 M2 4TG
