@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
+<main id="content" role="main">
+
+    {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %}
+
+
+
+    <form action="/outgoing-comms/4/1" method="get" class="form">
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">CID ID: 1253874</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td> Ayo Zan Zheng</td>
+                </tr>
+                <tr>
+                    <th>Passport number</th>
+                    <td>L898902C</td>
+                </tr>                
+<!--
+                <tr>
+                    <th>Nationality</th>
+                    <td>Vietnamese</td>
+                </tr>
+                <tr>
+                    <th>DOB</th>
+                    <td>23 June 1993</td>
+                </tr>
+
+                <tr>
+                    <th>Visa</th>
+                    <td>Tier 4 (General) student</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td> Consideration (GCS6)</td>
+                </tr>
+-->
+                <tr>
+                    <th>Email</th>
+                    <td>Valid (ayo.zhang@address.com)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="form-group">
+            <input type="submit" class="button continue-button" value="Select this user">
+        </div>
+        <a href="/outgoing-comms/3/index">Search again</a>
+
+    </form>
+
+</main>
+{% endblock %}
