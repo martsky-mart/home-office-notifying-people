@@ -1,35 +1,35 @@
 .lionel {
-	background: url('/public/images/lionel.jpg') no-repeat center center;
-	background-size: cover;
+    background: url('/public/images/lionel.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .brent {
-	background: url('/public/images/davidbrent.jpg') no-repeat center center;
-	background-size: cover;
+    background: url('/public/images/davidbrent.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .remove-bottom-margin {
-	margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .remove-bottom-padding {
-	margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .continue-button {
-	margin: 2rem 0;
+    margin: 2rem 0;
 }
 
 .govuk-box-highlight.panel-fail {
-	background-color: $panel-colour;
-	color: #000;
+    background-color: $panel-colour;
+    color: #000;
 }
 
 #logo {
-//	background-image: url('/public/images/homeoffice_logotype_shield_invert_trans.png') !important;
+    //	background-image: url('/public/images/homeoffice_logotype_shield_invert_trans.png') !important;
 }
 
-.applicant {    
+.applicant {
     margin: 0.8rem 0;
     padding-left: 8.4rem;
     background-image: url("https://visas-immigration.service.gov.uk/assets/images/contact.svg");
@@ -38,25 +38,160 @@
     background-size: 7.2rem;
 }
 
-
 .progress {
-  width: 100%;
-  height: 50px;
+    width: 100%;
+    height: 50px;
 }
+
 .progress-wrap {
-  background: #f80;
-  margin: 20px 0;
-  overflow: hidden;
-  position: relative;
-  .progress-bar {
-    background: #ddd;
-    left: 0;
-    position: absolute;
-    top: 0;
-  }
+    background: #f80;
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+    .progress-bar {
+        background: #ddd;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
 }
 
+// ------------------------------------------------ Tab styles taken and adapted from http://dwp-patterns.herokuapp.com/adminmenus
+.admin-wrapper a {
+    text-decoration: none;
+    color: #000;
+}
 
+.admin-header-wrapper {
+    background-color: #DEE0E2;
+    height: 40px;
+    text-align: right;
+    font-size: 16px;
+    width: 100%;
+}
 
+.admin-header-content {
+    margin: auto;
+    width: 100%;
+    max-width: 1020px;
+}
+
+.admin-header-content li {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 10px;
+    border-right: 1px solid #999;
+}
+
+.admin-header-content li:last-child {
+    border-right: none;
+}
+
+.admin-wrapper {
+    position: relative;
+    clear: both;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    background-color: #F8F8F8;
+}
+
+.admin-wrapper .admin-column-wrapper {
+    float: left;
+    width: 200%;
+    position: relative;
+    left: 20%;
+    background: #fff;
+    border-left: 2px solid #999;
+}
+
+.admin-wrapper .admin-content-wrapper {
+    float: right;
+    width: 50%;
+    position: relative;
+    padding-bottom: 1em;
+}
+
+.admin-wrapper .admin-content {
+    margin-left: 50px;
+    position: relative;
+    right: 100%;
+    overflow: hidden;
+}
+
+.admin-wrapper .admin-sidebar-wrapper {
+    float: left;
+    width: 10%;
+    position: relative;
+    right: 10%;
+}
+
+//   --------------- Tab styles
+.admin-submenu ul {
+    border-bottom: 1px solid #BFC1C3;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.admin-submenu li {
+    display: inline-block;
+}
+
+.admin-submenu li:first-child {
+    padding-left: 0;
+}
+
+.admin-submenu a {
+    display: block;
+    font-size: 16px;
+    padding: 10px 20px;
+    position: relative;
+    top: 1px;
+    text-decoration: none;
     
+    &:visited {
+        color: #2e8aca
+    }
     
+    span {
+
+        text-decoration: underline;
+        
+        &.sent,
+        &.failed,
+        &.unknown {
+            padding: 3px 7px;
+            margin-left: 5px;
+            background: #B10E1E;
+            color: #fff;
+            text-decoration: none;
+        }
+        &.sent {
+            background: #006435;
+        }
+        &.unknown {
+            background: #F47738;
+        }
+    }
+    
+    &:focus {
+        outline: 0px solid;
+        background: transparent;
+    }
+    &:hover {
+        background: #DEE0E2;
+    }
+
+}
+
+.admin-submenu li.active {
+    a {
+        border: 1px solid #BFC1C3;
+        border-bottom: 1px solid white;
+        color: #000;
+    }
+    
+    span {
+        text-decoration: none;
+    }
+}
