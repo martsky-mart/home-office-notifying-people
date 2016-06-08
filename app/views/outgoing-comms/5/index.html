@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Home Office - Visa and Immigration
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/phase_banner_alpha.html" %}
+
+{% include "includes/outgoing-header.html" %}
+
+    
+<h2 class="heading-medium" style="margin-top: 20px;">Find the applicant</h2>
+
+
+  <form action="/outgoing-comms/5/check-results" method="get" class="form">
+ {% if errors_on %}
+  <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+    <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+      Please correct the following errors
+    </h1>
+
+    <p>
+      Please make a selection.
+    </p>
+
+<!--     <ul class="error-summary-list">
+      <li><a href="#ni-number">National Insurance Number is missing</a></li>
+      <li><a href="#from-date">From date is missing</a></li>
+      <li><a href="#to-date">To date is missing</a></li>
+    </ul> -->
+
+  </div>
+  {% endif %}
+
+
+<fieldset>
+    <div class="form-group">
+        <label class="form-label" for="cid">Applicant ID</label>
+        <input class="form-control-1-8" id="cid" name="pnn" type="text" autocomplete="off">
+    </div>
+
+</fieldset>
+
+
+
+
+    <div class="form-group">
+      <input type="submit" class="button continue-button" value="Find">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
+<main id="content" role="main">
+
+    {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %}
+
+    <h2 class="heading-medium" style="margin-top: 20px;">Please check before sending</h2>
+
+
+    <form action="/outgoing-comms/5/4" method="get" class="form">
+
+        <p>Send as</p>
+        <fieldset class="inline">
+
+            <label class="block-label" for="radio-inline-1">
+                <input id="radio-inline-1" type="radio" name="radio-inline-group" checked value="Email"> Email
+            </label>
+            <label class="block-label" for="radio-inline-2">
+                <input id="radio-inline-2" type="radio" name="radio-inline-group" value="Letter"> Letter
+            </label>
+
+        </fieldset>
+
+
+        <details>
+
+            <summary><span class="summary">Show text</span></summary>
+
+            <div class="panel panel-border-narrow">
+
+                <p> To: ayo.zhang@address.com Subject: Your Tier 4 (General) student visa application decision</p>
+
+                <p>Your Tier 4 (General) student visa application has been approved. You have been given permission to study: </p>
+
+                <p>Course: Certificate in Human Resources Sponsor: University of Life </p>
+
+                <p>We will send your biometric residence permit (BRP) within 7 working days. The courier will need proof of identity and a signature. See gov.uk/brp for more information about the BRP. </p>
+
+                <h3>Travelling out of the UK?</h3>
+                <p>You should not make any travel arrangements until you receive your BRP. </p>
+
+                <h2>What you need to do now </h2>
+                <p>You must register with the police within 7 days of receiving your BRP. Police registration information is no longer displayed on BRPs. You must still register. </p>
+
+                <p>See <a href="gov.uk/register-with-the-police">gov.uk/register-with-the-police</a> for information about where to go and what documents to take. </p>
+
+                <p>Go to gov.uk/leaflet.to.come for the conditions of your stay in the UK.</p>
+
+                If you have been granted less time than applied for, you may get a partial refund of your Immigration Health Surcharge payment. If you’re unhappy with the amount or conditions of your leave you can ask for your application to be reviewed. See gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk.
+
+
+
+
+            </div>
+
+        </details>
+
+        <div class="form-group">
+            <input type="submit" class="button continue-button" value="Select and continue">
+        </div>
+
+    </form>
+
+
+
+</main>
+{% endblock %}

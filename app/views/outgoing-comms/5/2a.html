@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Home Office - Visa and Immigration
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/phase_banner_alpha.html" %}
+
+{% include "includes/outgoing-header.html" %}
+
+{% include "includes/applicant-details.html" %}
+
+<h1 class="heading-medium" style="margin-top: 20px;">Generate approval</h1>
+
+  <form action="/outgoing-comms/5/3" method="get" class="form">
+
+    <fieldset class="inline">
+
+  <h2 class="heading-small">
+    Does the applicant have dependants?
+  </h2>
+      <label class="block-label" data-target="dependant-granted" for="radio-has-dependant-yes" >
+        <input id="radio-has-dependant-yes" type="radio" name="radioHasDependant" value="yes">
+        Yes
+      </label>
+      <label class="block-label" for="radio-have-dependant-no">
+        <input id="radio-has-dependant-no" type="radio" name="radioHasDependant" value="no">
+        No
+      </label>
+
+    </fieldset>
+
+<div class="js-hidden" id="dependant-granted">
+  <fieldset class="inline">
+
+  <h2 class="heading-small">
+    Dependant 1
+  </h2>
+      <label class="block-label" for="radio-dependant-1-granted" >
+        <input id="radio-dependant-1-granted" type="radio" name="radioDependant1" value="granted">
+        Granted
+      </label>
+      <label class="block-label" for="dependant-1-refused">
+        <input id="radio-dependant-1-refused" type="radio" name="radioDependant1" value="refused">
+        Refused
+      </label>
+
+    </fieldset>
+
+   <fieldset class="inline">
+
+  <h2 class="heading-small">
+    Dependant 2
+  </h2>
+      <label class="block-label"  for="radio-dependant-2-granted" >
+        <input id="radio-dependant-2-granted" type="radio" name="radioDependant2" value="granted">
+        Granted
+      </label>
+      <label class="block-label" for="dependant-2-refused">
+        <input id="radio-dependant-2-refused" type="radio" name="radioDependant2" value="refused">
+        Refused
+      </label>
+
+    </fieldset>
+</div>
+
+    <fieldset class="inline">
+
+  <h2 class="heading-small">
+    Police registration
+  </h2>
+      <label class="block-label" for="radio-police-yes">
+        <input id="radio-police-yes" type="radio" name="radioPolice" value="yes">
+        Yes
+      </label>
+      <label class="block-label" for="radio-police-no">
+        <input id="radio-police-no" type="radio" name="radioPolice" value="no">
+        No
+      </label>
+
+    </fieldset>
+
+
+    <table class="no-lines">
+      <tr>
+      <th>Course:</th>
+      <td>Electronic Engineering</td>
+      </tr>
+      <tr>
+      <th>Sponsor:</th>
+      <td>Manchester University</td>
+      </tr>
+      <tr>
+      <th>Address:</th>
+      <td>Faculty of Engineering, Electronic House, M2 4TG</td>
+      </tr>
+      </table>
+
+
+    <div class="form-group">
+      <input type="submit" class="button continue-button" value="Next">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
