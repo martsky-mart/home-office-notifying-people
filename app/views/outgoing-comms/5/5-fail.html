@@ -1,31 +1,21 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Home Office - Visa and Immigration
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
 <main id="content" role="main">
 
-{% include "includes/phase_banner_alpha.html" %}
-    
-    {% include "includes/outgoing-header.html" %}
-
-    {% include "includes/applicant-details.html" %}
+    {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %} {% include "includes/applicant-details.html" %}
 
 
-    
-<div class="govuk-box-highlight" style="background: #B10E1E;">
-      <h1 class="bold-large" style="margin-bottom: 20px;">Email failed to send</h1>
-      <p>
-        We were unable to send the Grant for a Tier 4 (General) student visa to
-Ayo Zan Zheng
-      </p>
-    
-    <p class="bold-small">Please amend the email address in CID and  hit resend</p>
-    
-    
-<!--      <p>Their status on CID will be updated overnight to Decision made (GSC 7)</p>-->
+
+    <div class="govuk-box-highlight" style="background: #B10E1E;">
+        <h1 class="bold-large" style="margin-bottom: 20px;">Email failed to send</h1>
+        
+        <p>There was a problem with the email address</p>
+
+        <p>We were unable to send the Grant for a Tier 4 (General) student visa to Ayo Zan Zheng</p>
+
+        <p class="bold-small">Please amend the email address in CID and hit resend</p>
+
+
+        <!--      <p>Their status on CID will be updated overnight to Decision made (GSC 7)</p>-->
     </div>
 
     <a href="/outgoing-comms/5/4" class="button">Resend (edit in CID first)</a>
