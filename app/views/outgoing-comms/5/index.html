@@ -4,6 +4,22 @@
     {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %}
 
 
+    <h2 class="heading-medium" style="margin-top: 20px;">Find an applicant</h2>
+    <form action="/outgoing-comms/5/check-results" method="get" class="form">
+        <fieldset>
+            <div class="form-group">
+                <label class="form-label" for="cid">Applicant ID</label>
+                <input class="form-control form-control-1-8" id="cid" name="pnn" type="text" autocomplete="off">
+            </div>
+
+        </fieldset>
+        <div class="form-group">
+            <input type="submit" class="button continue-button" value="Find">
+        </div>
+
+    </form>
+
+    <!--
     <div class="admin-column-wrapper">
         <div class="admin-content-wrapper">
             <div class="admin-content">
@@ -13,7 +29,7 @@
                             <li><a href="#"><span>Find an applicant</span></a></li>
                             <li><a href="#"><span>Failed emails</span> <span class="failed">2</span></a></li>
                             <li><a href="#"><span>Pending emails</span> <span class="unknown">3</span></a></li>
-<!--                            <li><a href="#"><span>Sent emails</span> <span class="sent">2,345</span></a></li>-->
+
                         </ul>
                     </div>
 
@@ -115,6 +131,7 @@
 
         </div>
     </div>
+-->
 
 
 
