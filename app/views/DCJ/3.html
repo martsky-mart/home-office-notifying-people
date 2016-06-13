@@ -1,35 +1,76 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Home Office - Visa and Immigration
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
 <main id="content" role="main">
 
-{% include "includes/phase_banner_alpha.html" %}
+    {% include "includes/phase_banner_alpha.html" %} {% include "includes/breadcrumb_notifying_1.html" %}
 
-{% include "includes/breadcrumb_notifying_1.html" %}
-    
-<h2 class="heading-large " style="margin-top: 20px;">Your email and password</h2>
+    <h2 class="heading-large " style="margin-top: 20px;">Your email and password</h2>
 
 
-<form action="/DCJ/4" method="get" class="form">
-    <div class="form-group">
-        <label class="form-label" for="email">Email address</label>
-        <span class="form-hint">You need an email address so you can save your application and go back to it later</span>
-        <input class="form-control" id="email" name="email" type="email" >
-        <label class="form-checkbox" for="checkbox-email" style="margin-bottom: 5px;">
-            <input id="checkbox-email" name="checkbox-email" type="checkbox" value="true">
-            Use email rather than post where possible
-        </label>
-        <span class="form-hint">We can email you your decision as soon as it is made instead of posting it to you, as well as in some other circumstances when we need to get in touch.</span>
+    <form action="/DCJ/4" method="get" class="form">
+        <fieldset class="inline">
 
+            <h2 class="heading-small">Would you like us to contact you or your student advisor if you have one?</h2>
 
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="password">Create a password</label>
-        <span class="form-hint">
+            <label class="block-label" data-target="edit-sponsor" for="radio-sponsor-ok">
+                <input id="radio-sponsor-ok" type="radio" name="radioSponsor" value="yes">Contact me
+            </label>
+            <label class="block-label" data-target="edit-sponsor2" for="radio-sponsor-edit">
+                <input id="radio-sponsor-edit" type="radio" name="radioSponsor" value="no">Contact my student advisor
+            </label>
+
+        </fieldset>
+
+        <div class="js-hidden" id="edit-sponsor">
+            <fieldset class="inline">
+                <div class="panel panel-border-narrow">
+                    <div class="form-group">
+                        <label class="form-label-bold" for="email">Your email address</label>
+                        <span class="form-hint">You need an email address so we can contact you with your decision, and so you can save your application and go back to it later</span>
+                        <input class="form-control" id="email" name="email" type="email" style="margin-bottom: 10px;">
+
+                        <p  class="heading-small" style="margin-bottom: 5px;">We will email your decision when it is made.</p>
+                            
+                        <label class="form-checkbox" for="checkbox-email" style="margin-top: 0px;">
+                            <input id="checkbox-email" name="checkbox-email" type="checkbox" value="true">Check this if you would prefer to be informed by post</label>
+
+<!--
+                        <label for="radio-part-2" class="block-label">
+                            <input id="radio-part-2" type="checkbox" name="housing-act" value="Part 2" aria-expanded="false">
+                            We will email your decision when it is made.<br/>
+                            <span class="heading-small">If you would prefer to be informed by post instead of email, please check this box</span>
+                        </label>
+-->
+                    </div>
+
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="js-hidden" id="edit-sponsor2">
+            <fieldset class="inline">
+                <div class="panel panel-border-narrow">
+                    <div class="form-group">
+                        <label class="form-label-bold" for="emaily">Your email address</label>
+                        <span class="form-hint">You need an email address so you can save your application and go back to it later</span>
+                        <input class="form-control" id="emaily" name="emaily" type="email">
+
+                        <label class="form-label-bold" for="emailsa" style="margin-top: 30px">Your student advisor's address</label>
+                        <span class="form-hint">We need their email address so we can inform them of your decision</span>
+                        <input class="form-control" id="emailsa" name="emailsa" type="email" style="margin-bottom: 10px;">
+                        
+                        <p class="heading-small" style="margin-bottom: 5px;">We will email them  your decision when it is made.</p>
+
+                        <label class="form-checkbox" for="checkbox-email2" style="margin-top: 0px;">
+                            <input id="checkbox-email2" name="checkbox-email" type="checkbox" value="true">Check this if you would prefer them to be informed by post</label>
+                    </div>
+
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="form-group" style="margin-top: 20px;">
+            <label class="form-label-bold" for="password">Create a password</label>
+            <span class="form-hint">
         Your password must
             <ul class="list list-bullet" style="margin-left: 25px; margin-top: 15px;">
                 <li>be at least 8 characters long</li>
@@ -37,18 +78,18 @@
                 <li>contain at least one number or symnbol such as @ or %</li>
             </ul>
         </span>
-        <input class="form-control" id="password" name="password" type="password">
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="password2">Repeat your password</label>
-        <input class="form-control" id="password2" name="password2" type="password">
-    </div>
-      
-    <div class="form-group">
-      <input type="submit" class="button continue-button" value="Save and continue">
-    </div>
+            <input class="form-control" id="password" name="password" type="password">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="password2">Repeat your password</label>
+            <input class="form-control" id="password2" name="password2" type="password">
+        </div>
 
-  </form>
+        <div class="form-group">
+            <input type="submit" class="button continue-button" value="Save and continue">
+        </div>
+
+    </form>
 
 </main>
 {% endblock %}
