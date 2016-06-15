@@ -1,0 +1,33 @@
+{% extends "layout_gds.html" %}
+
+{% block page_title %}
+  Home Office - Visa and Immigration
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/phase_banner_alpha.html" %}
+
+{% include "includes/breadcrumb_notifying_1.html" %}
+    
+<h2 class="heading-large " style="margin-top: 20px;">Make sure this is right</h2>
+
+
+<form action="/DCJ/2/email-one-more" method="get" class="form">
+     <div class="form-group" style="margin-bottom: 0;">
+        <label class="form-label" for="email"><strong>Please check your email</strong></label>
+        <span class="form-hint">You have asked us to email our decision to you</span>
+        <input class="form-control" id="email" name="email" type="email" value="example@email.com">
+
+    </div>
+    
+      
+    <div class="form-group">
+      <input type="submit" class="button continue-button" value="Yes - this is my email address">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

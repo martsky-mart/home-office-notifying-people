@@ -1,0 +1,101 @@
+{% extends "layout_gds.html" %}
+
+{% block page_title %}
+  Home Office - Visa and Immigration
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/phase_banner_alpha.html" %}
+    
+
+
+{% include "includes/breadcrumb_notifying_1.html" %}
+    
+<h2 class="heading-large " style="margin-top: 20px;">Check your answers</h2>
+
+
+<form action="/DCJ/2/application-start" method="get" class="form">
+
+<table class="check-your-answers">
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium" style="margin: 0;">
+            Personal information
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Are you currently in the UK?
+        </td>
+        <td>
+          Yes
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium" style="margin: 0;">
+            Legal representative
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Do you have a legal representative for this application?
+        </td>
+        <td>
+          No
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium" style="margin: 0;">
+            Personal information
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+      <tr>
+        <td>
+       Email address
+        </td>
+        <td>
+          example@email.com
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+ 
+    </tbody>
+  </table>
+    
+      
+    <div class="form-group">
+      <input type="submit" class="button continue-button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
