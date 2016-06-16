@@ -273,6 +273,31 @@ router.get('/outgoing-comms/4/', function (req, res) {
 // -------------------------------------------------------------- V5
 
 
+router.get('/outgoing-comms/5/check-results/', function (req, res) {
+
+  // get the answer from the query string (eg. ?over18=false)
+//  var hasDependants = req.query.radioHasDependant;
+//  var radioDependant1 = req.query.radioDependant1;
+//  var radioDependant2 = req.query.radioDependant2;
+  var pnn = req.query.pnn;
+    
+  
+//res.redirect(pnn);
+  if (pnn === "a"){
+    // redirect to the relevant page
+   res.redirect("/outgoing-comms/5/check-results");
+  }
+
+
+  else {
+  res.redirect('/outgoing-comms/5/index-errors');
+
+
+
+  }
+
+});
+
 router.get('/outgoing-comms/5/3/', function (req, res) {
 
   // get the answer from the query string (eg. ?over18=false)
@@ -290,22 +315,11 @@ router.get('/outgoing-comms/5/3/', function (req, res) {
     // redirect to the relevant page
     res.redirect("/outgoing-comms/5/3-approval-nodependants-withpolice");
   }
-//
-//  else if (hasDependants == "yes" & radioPolice == "no"){
-//    // redirect to the relevant page
-//    res.redirect("/outgoing-comms/5/3-approval-withdependants-nopolice");
-//  }
-//
-//  else if (hasDependants == "yes" & radioPolice == "yes"){
-//    // redirect to the relevant page
-//    res.redirect("/outgoing-comms/5/3-approval-withdependants-withpolice");
-//  }
-
 
   else {
+  res.redirect('/outgoing-comms/5/2-errors');
 
-    // if over18 is any other value (or is missing) render the page requested
-   // res.render('examples/over-18');
+
 
   }
 
@@ -332,7 +346,7 @@ router.get('/outgoing-comms/5/2a/', function (req, res) {
 });
 
 router.get('/outgoing-comms/5/', function (req, res) {
-  res.render('/outgoing-comms/5/1', {'errors_on' : req.query.errors});
+  res.render('/outgoing-comms/5/1', {'errors' : true});
 });
 
 

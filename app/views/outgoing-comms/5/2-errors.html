@@ -7,7 +7,6 @@
 
     <form action="/outgoing-comms/5/3" method="get" class="form">
 
-        {% if errors %}
         <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
 
         <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
@@ -15,21 +14,23 @@
         </h1>
 
         <p>
-          Please make a selection.
         </p>
 
-<!--     <ul class="error-summary-list">
-      <li><a href="#ni-number">National Insurance Number is missing</a></li>
-      <li><a href="#from-date">From date is missing</a></li>
-      <li><a href="#to-date">To date is missing</a></li>
-    </ul> -->
+            <ul class="error-summary-list">
+      <li><a href="#police">Does the applicant need to register with the police?</a></li>
+
+    </ul>
 
   </div>
-  {% endif %}
 
-        <fieldset class="inline">
+        <fieldset class="inline" id="police">
+            <div class="form-group error">
 
-            <h2 class="heading-small">Does the applicant need to register with the police?</h2>
+            <span class="form-label-bold">Does the applicant need to register with the police?</span>
+             <span class="error-message">
+            Please make a selection
+          </span>
+
 
             <label class="block-label" for="radio-police-yes">
                 <input id="radio-police-yes" type="radio" name="radioPolice" value="yes"> Yes
@@ -37,7 +38,7 @@
             <label class="block-label" for="radio-police-no">
                 <input id="radio-police-no" type="radio" name="radioPolice" value="no"> No
             </label>
-
+            </div>
         </fieldset>
 
 
