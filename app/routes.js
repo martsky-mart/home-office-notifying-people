@@ -278,7 +278,7 @@ router.get('/outgoing-comms/5/check-input', function (req, res) {
  var pnn = req.query.pnn;
 
  // the pnn we're trying to match to continue
- var matchString = ["a","1212-0000-0000-1267"," 1212000000001267"];
+ var matchString = ["a","1212-0000-0000-1267","1212000000001267"];
 
  var loginMatched = false;
 
