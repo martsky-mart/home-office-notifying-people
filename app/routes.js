@@ -272,26 +272,37 @@ router.get('/outgoing-comms/4/', function (req, res) {
 
 // -------------------------------------------------------------- V5
 
-
 router.get('/outgoing-comms/5/check-input', function (req, res) {
 
-  // get the answer from the query string (eg. ?pnn=a)
-  var pnn = req.query.pnn;
+ // get the answer from the query string (eg. ?pnn=a)
+ var pnn = req.query.pnn;
 
-  // the pnn we're trying to match to continue
-  var matchString = "a";
+ // the pnn we're trying to match to continue
+ var matchString = ["a"," 1212-0000-0000-1267"," 1212000000001267"];
 
-  if (pnn !== matchString){
-    // redirect to the relevant page
-    res.redirect("/outgoing-comms/5/index-errors");
+ var loginMatched = false;
 
-  } else {
-    // redirect to the relevant page
-    res.redirect("/outgoing-comms/5/check-results");
+ for (var i=0; i < matchString.length; i++)
+ {
+   if (pnn === matchString[i])
+   {
+     loginMatched = true;
+   }
+ }
 
-  }
+ if (!loginMatched){
+   // redirect to the relevant page
+   res.redirect("/outgoing-comms/5/index-errors");
+
+ } else {
+   // redirect to the relevant page
+   res.redirect("/outgoing-comms/5/check-results");
+
+ }
 
 });
+
+
 
 router.get('/outgoing-comms/5/3/', function (req, res) {
 
