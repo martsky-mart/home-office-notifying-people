@@ -273,26 +273,21 @@ router.get('/outgoing-comms/4/', function (req, res) {
 // -------------------------------------------------------------- V5
 
 
-router.get('/outgoing-comms/5/check-results/', function (req, res) {
+router.get('/outgoing-comms/5/check-input', function (req, res) {
 
-  // get the answer from the query string (eg. ?over18=false)
-//  var hasDependants = req.query.radioHasDependant;
-//  var radioDependant1 = req.query.radioDependant1;
-//  var radioDependant2 = req.query.radioDependant2;
+  // get the answer from the query string (eg. ?pnn=a)
   var pnn = req.query.pnn;
-    
-  
-//res.redirect(pnn);
-  if (pnn === "a"){
+
+  // the pnn we're trying to match to continue
+  var matchString = "a";
+
+  if (pnn !== matchString){
     // redirect to the relevant page
-   res.redirect("/outgoing-comms/5/check-results");
-  }
+    res.redirect("/outgoing-comms/5/index-errors");
 
-
-  else {
-  res.redirect('/outgoing-comms/5/index-errors');
-
-
+  } else {
+    // redirect to the relevant page
+    res.redirect("/outgoing-comms/5/check-results");
 
   }
 
