@@ -1,0 +1,382 @@
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
+<main id="content" role="main">
+
+    {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %}
+
+
+
+    <form action="/outgoing-comms/5/email-sent" method="get" class="form">
+
+        <table>
+            <tbody>
+                <tr>
+                    <!--                 Applicant details here                    -->
+                    <th colspan="2">
+                        <h2 class="heading-medium" style="margin: 0px 0 0 0;">Applicant details</h2>
+                        <p style="margin-bottom: 0;">Enter the applicant details from CID</p>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="form-label-bold" for="uan">
+                            Unique applicant number:
+                        </label>
+                    </th>
+                    <td style="width: 70%;  padding: 0;">
+                        <input class="form-control form-control-1-3" id="uan" name="uan" type="text" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="form-label-bold" for="name">
+                            Full name:
+                        </label>
+                    </th>
+                    <td style="width: 70%;  padding: 0;">
+                        <input class="form-control" id="name" name="name" type="text" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="form-label-bold" for="email">
+                            Email:
+                        </label>
+                    </th>
+                    <td style="width: 70%;  padding: 0;">
+                        <input class="form-control" id="email" name="email" type="text" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="form-label-bold">
+                            Register with police?
+                        </label>
+                    </th>
+                    <td class="inline">
+
+                        <label class="block-label" for="reg-yes">
+                            <input id="reg-yes" type="radio" name="reg" value="yes"> No
+                        </label>
+
+                        <label class="block-label" for="reg-no">
+                            <input id="reg-no" type="radio" name="reg" value="no"> Yes
+                        </label>
+                    </td>
+                </tr>
+                <!--                 Course details here                    -->
+
+                <tr>
+                    <th colspan="2">
+                        <h2 class="heading-medium" style="margin: 20px 0 0 0;">Course details</h2>
+                        <p style="margin-bottom: 0;">Enter the course details from CAS</p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="form-label-bold" for="sponsor">
+                            Sponsor:
+                        </label>
+                    </th>
+                    <td style="width: 70%;  padding: 0;">
+                        <input class="form-control" id="sponsor" name="sponsor" type="text" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="form-label-bold" for="course">Course:</label>
+                    </th>
+                    <td style="padding: 0;">
+                        <input class="form-control" id="course" name="course" type="text" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="form-label-bold" for="courselevel">Course level:</label>
+                    </th>
+                    <td style="padding: 0;">
+                        <input class="form-control" id="courselevel" name="course" type="text" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th style="vertical-align: top;">
+                        <label class="form-label-bold" for="address">Main study address:</label>
+                    </th>
+                    <td style="padding: 0;">
+                        <textarea class="form-control" id="address" rows="4" name="course"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <fieldset class="inline">
+
+            <h2 class="heading-small">Are there any dependants</h2>
+
+            <label class="block-label" data-target="right" for="radio-sponsor-ok">
+                <input id="radio-sponsor-ok" type="radio" name="radioSponsor" value="yes"> No
+            </label>
+            <label class="block-label" data-target="wrong" for="radio-sponsor-edit">
+                <input id="radio-sponsor-edit" type="radio" name="radioSponsor" value="no"> Yes
+            </label>
+
+        </fieldset>
+
+        <div class="js-hidden" id="right">
+
+            <details style="margin: 20px 0;">
+
+                <summary>
+                    <span class="summary">Preview email</span>
+                </summary>
+
+                <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px; margin-bottom: -1px;">
+                    <p> To: wayne.thornton@address.com
+                        <br/> Subject: <strong>Your Tier 4 (General) student visa application decision</strong></p>
+                </div>
+
+                <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px;">
+                    <p>Your Tier 4 (General) student visa application has been granted. You have been given permission to study: </p>
+
+                    <p>Course: Electronic Engineering
+                        <br/> Course level: Master of Engineering
+                        <br/> Sponsor: Manchester University
+                        <br/> Address: Faculty of Engineering, Electronic House, M2 4TG</p>
+
+                    <p>We will send your biometric residence permit (BRP) within 7 working days. The courier will need proof of identity and a signature. See <a href="http://gov.uk/brp">gov.uk/brp</a> for more information about the BRP. </p>
+
+                    <p><strong>Travelling out of the UK?</strong></p>
+                    <p>You should not make any travel arrangements until you receive your BRP. </p>
+
+                    <p><strong>What you need to do now</strong></p>
+
+                    <p>Go to <a href="http://gov.uk/leaflet.to.come">gov.uk/leaflet.to.come</a> for the conditions of your stay in the UK.</p>
+
+                    <p>If you have been granted less time than applied for, you may get a partial refund of your Immigration Health Surcharge payment.</p>
+
+                    <p>If you’re unhappy with the amount or conditions of your leave you can ask for your application to be reviewed. See <a href="http://gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk">gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk</a>.</p>
+
+                </div>
+            </details>
+
+            <div class="form-group">
+                <input type="submit" class="button continue-button" value="Generate grant notification">
+            </div>
+
+        </div>
+
+
+        <div class="js-hidden" id="wrong">
+            <div class="panel panel-border-narrow">
+                <!--                 First dependant details here                    -->
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <th colspan="2">
+                                <h2 class="heading-medium" style="margin: 0px 0 0 0;">Dependant 1  details</h2>
+                                <p style="margin-bottom: 0;">Enter the applicant details from CID</p>
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label class="form-label-bold" for="uan1">
+                                    Unique applicant number:
+                                </label>
+                            </th>
+                            <td style="width: 70%;  padding: 0;">
+                                1212-1234-1234-1234/
+                                <input type="number" class="form-control form-control-2-digit" name="uan1" id="uan1" min="1" max="100" step="1" value="1" style="width: 2em;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label class="form-label-bold" for="name1">
+                                    Full name:
+                                </label>
+                            </th>
+                            <td style="width: 70%;  padding: 0;">
+                                <input class="form-control" id="name1" name="name1" type="text" autocomplete="off">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label class="form-label-bold">
+                                    Register with police?
+                                </label>
+                            </th>
+                            <td class="inline">
+
+                                <label class="block-label" for="reg-yes1">
+                                    <input id="reg-yes1" type="radio" name="reg1" value="yes"> No
+                                </label>
+
+                                <label class="block-label" for="reg-no1">
+                                    <input id="reg-no1" type="radio" name="reg1" value="no"> Yes
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <fieldset class="inline">
+
+                <h2 class="heading-small">Are there any more dependants</h2>
+
+                <label class="block-label" data-target="right1" for="radio-sponsor-ok1">
+                    <input id="radio-sponsor-ok1" type="radio" name="radioSponsor1" value="yes"> No
+                </label>
+                <label class="block-label" data-target="wrong1" for="radio-sponsor-edit1">
+                    <input id="radio-sponsor-edit1" type="radio" name="radioSponsor1" value="no"> Yes
+                </label>
+
+            </fieldset>
+
+            <div class="js-hidden" id="right1">
+
+                <details style="margin: 20px 0;">
+
+                    <summary>
+                        <span class="summary">Preview email</span>
+                    </summary>
+
+                    <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px; margin-bottom: -1px;">
+                        <p> To: wayne.thornton@address.com
+                            <br/> Subject: <strong>Your Tier 4 (General) student visa application decision</strong></p>
+                    </div>
+
+                    <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px;">
+                        <p>Your Tier 4 (General) student visa application has been granted. You have been given permission to study: </p>
+
+                        <p>Course: Electronic Engineering
+                            <br/> Course level: Master of Engineering
+                            <br/> Sponsor: Manchester University
+                            <br/> Address: Faculty of Engineering, Electronic House, M2 4TG</p>
+
+                        <p>We will send your biometric residence permit (BRP) within 7 working days. The courier will need proof of identity and a signature. See <a href="http://gov.uk/brp">gov.uk/brp</a> for more information about the BRP. </p>
+
+                        <p><strong>Travelling out of the UK?</strong></p>
+                        <p>You should not make any travel arrangements until you receive your BRP. </p>
+
+                        <p><strong>What you need to do now</strong></p>
+
+                        <p>Go to <a href="http://gov.uk/leaflet.to.come">gov.uk/leaflet.to.come</a> for the conditions of your stay in the UK.</p>
+
+                        <p>If you have been granted less time than applied for, you may get a partial refund of your Immigration Health Surcharge payment.</p>
+
+                        <p>If you’re unhappy with the amount or conditions of your leave you can ask for your application to be reviewed. See <a href="http://gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk">gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk</a>.</p>
+                    </div>
+                </details>
+
+                <div class="form-group">
+                    <input type="submit" class="button continue-button" value="Generate grant notification">
+                </div>
+
+            </div>
+
+            <div class="js-hidden" id="wrong1">
+                <div class="panel panel-border-narrow">
+                    <!--                 Second dependant details here                    -->
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th colspan="2">
+                                    <h2 class="heading-medium" style="margin: 0px 0 0 0;">Dependant 2 details</h2>
+                                    <p style="margin-bottom: 0;">Enter the applicant details from CID</p>
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="form-label-bold" for="uan2">
+                                        Unique applicant number:
+                                    </label>
+                                </th>
+                                <td style="width: 70%;  padding: 0;">
+                                    1212-1234-1234-1234/
+                                    <input type="number" class="form-control form-control-2-digit" name="uan2" id="uan2" min="1" max="100" step="1" value="2" style="width: 2em;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="form-label-bold" for="name2">
+                                        Full name:
+                                    </label>
+                                </th>
+                                <td style="width: 70%;  padding: 0;">
+                                    <input class="form-control" id="name2" name="name2" type="text" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="form-label-bold">
+                                        Register with police?
+                                    </label>
+                                </th>
+                                <td class="inline">
+
+                                    <label class="block-label" for="reg-yes2">
+                                        <input id="reg-yes2" type="radio" name="reg2" value="yes"> No
+                                    </label>
+
+                                    <label class="block-label" for="reg-no2">
+                                        <input id="reg-no2" type="radio" name="reg2" value="no"> Yes
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <fieldset class="inline">
+
+                    <h2 class="heading-small">Are there any more dependants</h2>
+
+                    <label class="block-label" data-target="right2" for="radio-sponsor-ok2">
+                        <input id="radio-sponsor-ok2" type="radio" name="radioSponsor2" value="yes"> No
+                    </label>
+                    <label class="block-label" data-target="wrong2" for="radio-sponsor-edit2">
+                        <input id="radio-sponsor-edit2" type="radio" name="radioSponsor2" value="no"> Yes
+                    </label>
+
+                </fieldset>
+
+                <div class="js-hidden" id="right2">
+
+                    <details style="margin: 20px 0;">
+
+                        <summary>
+                            <span class="summary">Preview email</span>
+                        </summary>
+
+                        <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px; margin-bottom: -1px;">
+                            <p>Email preview would appear here</p>
+                        </div>
+
+
+                    </details>
+
+                    <div class="form-group">
+                        <input type="submit" class="button continue-button" value="Generate grant notification">
+                    </div>
+
+                </div>
+                <div class="js-hidden" id="wrong2">
+
+                    <p>Additional dependants would appear here</p>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </form>
+
+</main>
+{% endblock %}
