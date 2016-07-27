@@ -8,6 +8,38 @@ router.get('/', function (req, res) {
 
 // Branching
 
+
+// -------------------------------------------------------------- V5
+router.get('/outgoing-comms/5/send-something', function (req, res) {
+
+  var hasDependants = req.query.radioDep;
+  var hasDependants1 = req.query.radioDep1;
+
+  if (hasDependants == "no"){
+    // redirect to the relevant page
+    res.redirect("/outgoing-comms/5/email-sent");
+  }
+
+  else  if (hasDependants == "yes" & hasDependants1 == "no"){
+    // redirect to the relevant page
+    res.redirect("/outgoing-comms/5/email-sent-dep1");
+  }
+
+  else if (hasDependants == "yes" & hasDependants1 == "yes"){
+    // redirect to the relevant page
+    res.redirect("/outgoing-comms/5/email-sent-dep2");
+  }
+
+
+  else {
+
+    // if over18 is any other value (or is missing) render the page requested
+//    res.redirect("/outgoing-comms/5/send-email");
+
+  }
+
+});
+
 // -------------------------------------------------------------- V1
 router.get('/outgoing-comms/1/3/', function (req, res) {
 

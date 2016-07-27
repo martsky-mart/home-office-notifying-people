@@ -5,14 +5,14 @@
 
 
 
-    <form action="/outgoing-comms/5/email-sent" method="get" class="form">
+    <form action="/outgoing-comms/5/send-something" method="get" class="form">
 
         <table>
             <tbody>
                 <tr>
                     <!--                 Applicant details here                    -->
                     <th colspan="2">
-                        <h2 class="heading-medium" style="margin: 0px 0 0 0;">Applicant details</h2>
+                        <h2 class="heading-medium" style="margin: 0px 0 0 0;" id="edit1">Applicant details</h2>
                         <p style="margin-bottom: 0;">Enter the applicant details from CID</p>
 
                     </th>
@@ -113,16 +113,16 @@
 
             <h2 class="heading-small">Are there any dependants?</h2>
 
-            <label class="block-label" data-target="right" for="radio-sponsor-ok">
-                <input id="radio-sponsor-ok" type="radio" name="radioSponsor" value="yes"> No
+            <label class="block-label" data-target="no" for="radio-dep-no">
+                <input id="radio-dep-no" type="radio" name="radioDep" value="no"> No
             </label>
-            <label class="block-label" data-target="wrong" for="radio-sponsor-edit">
-                <input id="radio-sponsor-edit" type="radio" name="radioSponsor" value="no"> Yes
+            <label class="block-label" data-target="yes" for="radio-dep-yes">
+                <input id="radio-dep-yes" type="radio" name="radioDep" value="yes"> Yes
             </label>
 
         </fieldset>
 
-        <div class="js-hidden" id="right">
+        <div class="js-hidden" id="no">
 
             <details style="margin: 20px 0;">
 
@@ -157,6 +157,9 @@
                     <p>If you’re unhappy with the amount or conditions of your leave you can ask for your application to be reviewed. See <a href="http://gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk">gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk</a>.</p>
 
                 </div>
+                
+                <a href="#edit1">Edit</a>
+
             </details>
 
             <div class="form-group">
@@ -166,7 +169,7 @@
         </div>
 
 
-        <div class="js-hidden" id="wrong">
+        <div class="js-hidden" id="yes">
             <div class="panel panel-border-narrow">
                 <!--                 First dependant details here                    -->
 
@@ -174,7 +177,7 @@
                     <tbody>
                         <tr>
                             <th colspan="2">
-                                <h2 class="heading-medium" style="margin: 0px 0 0 0;">Dependant 1  details</h2>
+                                <h2 class="heading-medium" style="margin: 0px 0 0 0;" id="editdep1">Dependant 1  details</h2>
                                 <p style="margin-bottom: 0;">Enter the applicant details from CID</p>
 
                             </th>
@@ -224,16 +227,16 @@
 
                 <h2 class="heading-small">Are there any more dependants?</h2>
 
-                <label class="block-label" data-target="right1" for="radio-sponsor-ok1">
-                    <input id="radio-sponsor-ok1" type="radio" name="radioSponsor1" value="yes"> No
+                <label class="block-label" data-target="no1" for="radio-dep-no1">
+                    <input id="radio-dep-no1" type="radio" name="radioDep1" value="no"> No
                 </label>
-                <label class="block-label" data-target="wrong1" for="radio-sponsor-edit1">
-                    <input id="radio-sponsor-edit1" type="radio" name="radioSponsor1" value="no"> Yes
+                <label class="block-label" data-target="yes1" for="radio-dep-yes1">
+                    <input id="radio-dep-yes1" type="radio" name="radioDep1" value="yes"> Yes
                 </label>
 
             </fieldset>
 
-            <div class="js-hidden" id="right1">
+            <div class="js-hidden" id="no1">
 
                 <details style="margin: 20px 0;">
 
@@ -241,12 +244,13 @@
                         <span class="summary">Preview emails</span>
                     </summary>
 
-                    <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px; margin-bottom: -1px;">
-                       <p>Email previews would appear here</p>
+                        <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px;">
+                        <p>Email previews would appear here</p>
 
                     </div>
+                    <a href="#editdep1">Edit dependant 1</a>
 
-                    
+
                 </details>
 
                 <div class="form-group">
@@ -255,15 +259,15 @@
 
             </div>
 
-            <div class="js-hidden" id="wrong1">
+            <div class="js-hidden" id="yes1">
                 <div class="panel panel-border-narrow">
-<!--                 Second dependant details here                    -->
+                    <!--                 Second dependant details here                    -->
 
                     <table>
                         <tbody>
                             <tr>
                                 <th colspan="2">
-                                    <h2 class="heading-medium" style="margin: 0px 0 0 0;">Dependant 2 details</h2>
+                                    <h2 class="heading-medium" style="margin: 0px 0 0 0;" id="dep2">Dependant 2 details</h2>
                                     <p style="margin-bottom: 0;">Enter the applicant details from CID</p>
 
                                 </th>
@@ -313,16 +317,17 @@
 
                     <h2 class="heading-small">Are there any more dependants?</h2>
 
-                    <label class="block-label" data-target="right2" for="radio-sponsor-ok2">
-                        <input id="radio-sponsor-ok2" type="radio" name="radioSponsor2" value="yes"> No
+                    <label class="block-label" data-target="no2" for="radio-dep-no2">
+                        <input id="radio-dep-no2" type="radio" name="radioDep2" value="no"> No
                     </label>
-                    <label class="block-label" data-target="wrong2" for="radio-sponsor-edit2">
-                        <input id="radio-sponsor-edit2" type="radio" name="radioSponsor2" value="no"> Yes
+                    <label class="block-label" data-target="yes2" for="radio-dep-yes2">
+                        <input id="radio-dep-yes2" type="radio" name="radioDep2" value="yes"> Yes
                     </label>
+
 
                 </fieldset>
 
-                <div class="js-hidden" id="right2">
+                <div class="js-hidden" id="no2">
 
                     <details style="margin: 20px 0;">
 
@@ -330,9 +335,10 @@
                             <span class="summary">Preview emails</span>
                         </summary>
 
-                        <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px; margin-bottom: -1px;">
+                        <div class="panel panel-border-narrow" style="border: 1px solid #bfc1c3; border-left-width: 5px;">
                             <p>Email previews would appear here</p>
                         </div>
+                        <a href="#editdep2">Edit dependant 2</a>
 
 
                     </details>
@@ -342,7 +348,7 @@
                     </div>
 
                 </div>
-                <div class="js-hidden" id="wrong2">
+                <div class="js-hidden" id="yes2">
 
                     <p>Additional dependants would appear here</p>
 
